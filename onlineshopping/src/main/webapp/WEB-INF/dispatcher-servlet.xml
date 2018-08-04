@@ -1,0 +1,39 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+   http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd 
+   http://www.springframework.org/schema/mvc
+   http://www.springframework.org/schema/mvc/spring-mvc.xsd 
+   ">
+	<!-- Adding Context element, because let front controller know and this 
+		application know whether the other controllers are lieing and need to use 
+		that controller -->
+
+
+	<!-- Application Scan for all those component that have annotated -->
+	<context:component-scan base-package="net.rch.onlineshopping.controller"></context:component-scan>
+
+	<!-- Configure Internal Resource View Resolver Reason - In my Page controller 
+		url is mapped with particular hander method. It is giving the view name that 
+		is page which is logical name not the physical name that is residing inside 
+		the views directory. SO need to resolve means which view technology is using. 
+		So, Internal Resource View Resolver is help to resolve particular view. SO, 
+		data is passing greeting to my view, which is get the displayed here -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<!-- Configure DIspatcher-Servlet to Load the Static Resources -->
+	<mvc:annotation-driven/>
+	 
+	<mvc:resources location="/assets/" mapping="/resources/**" />
+	
+</beans>
+   
