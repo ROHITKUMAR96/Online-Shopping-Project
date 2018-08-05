@@ -23,7 +23,8 @@ $(function() {
 		break;
 		
 	default:
-		$('#home').addClass('active');
+		$('#listProducts').addClass('active');
+		$('#a_'+menu).addClass('active');
 	break;
 	
 	}

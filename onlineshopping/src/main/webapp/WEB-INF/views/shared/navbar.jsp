@@ -26,24 +26,25 @@
           
            -->
           
-            <li id="home">
-              <a class="nav-link" href="${contextRoot}/home">Home</a>
+            <li class="nav-link" id="home">
+              <a href="${contextRoot}/home">Home</a>
             </li>
             
-            <li id="about">
-              <a class="nav-link" href="${contextRoot}/about">About Us</a>
+            <li class="nav-link" id="listProducts">
+            <!-- <a class="nav-link" href="${contextRoot}/listProducts">View Products</a> -->
+              <a href="${contextRoot}/show/all/products">View Products</a>
             </li>
             
-            <li id="listProducts">
-              <a class="nav-link" href="${contextRoot}/listProducts">View Products</a>
+            <li class="nav-link" id="offerZone">
+              <a href="${contextRoot}/offerZone">Offer Zone</a>
             </li>
             
-            <li id="offerZone">
-              <a class="nav-link" href="${contextRoot}/offerZone">Offer Zone</a>
+            <li class="nav-link" id="about">
+              <a href="${contextRoot}/about">About Us</a>
             </li>
             
-            <li id="contact">
-              <a class="nav-link" href="${contextRoot}/contact">Contact Us</a>
+            <li class="nav-link" id="contact">
+              <a href="${contextRoot}/contact">Contact Us</a>
             </li>
             
           </ul>

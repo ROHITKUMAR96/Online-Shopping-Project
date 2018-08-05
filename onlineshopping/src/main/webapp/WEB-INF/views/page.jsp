@@ -42,7 +42,7 @@
 
   </head>
 
-  <body>
+  <body>  
 	
 	<div class="wrapper">
 
@@ -64,7 +64,7 @@
     </c:if>
     
      <!-- This Content is loaded when the user click listProducts -->
-    <c:if test="${userClickListProducts == true }">
+    <c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
     <%@include file="listProducts.jsp" %>
     </c:if>
     
