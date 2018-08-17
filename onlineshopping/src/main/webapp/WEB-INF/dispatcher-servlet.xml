@@ -16,9 +16,9 @@
 
 
 	<!-- Application Scan for all those component that have annotated -->
-	<context:component-scan base-package="net.rch.onlineshopping.controller"></context:component-scan>
+	<context:component-scan base-package="net.rch.onlineshopping.controller"/>
 	
-	<context:component-scan base-package="net.rch.shoppingbackend.daoimpl"></context:component-scan>
+	<context:component-scan base-package="net.rch.shoppingbackend"/>
 	
 	<!-- Configure Internal Resource View Resolver Reason - In my Page controller 
 		url is mapped with particular hander method. It is giving the view name that 
@@ -32,8 +32,8 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	<!-- Configure DIspatcher-Servlet to Load the Static Resources -->
-	<mvc:annotation-driven/>
+	<!-- Configure Dispatcher-Servlet to Load the Static Resources -->
+	<mvc:annotation-driven />
 	 
 	<mvc:resources location="/assets/" mapping="/resources/**" />
 	
